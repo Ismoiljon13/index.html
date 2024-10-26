@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ilm ma'rifat</title>
+
+
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-06FYNY7TN1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-06FYNY7TN1');
+</script>
+
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mobile.css">
+    <link id="fav" rel="icon" href="image/Black___White_Typography_Creative_Artist_ArtDesign_Logo_-removebg-preview.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="navbar">
+                <div class="nav-box1">
+                    <h1>IQRO</h1>
+                </div>
+                <div class="nav-box2" id="navLinks">
+                    <a href="index.html">bosh sahifa</a>
+                    <a href="info.html" target="_blank">malumot</a>
+                    <a href="audio.html" target="_blank">audio darsliklar</a>
+                    
+                        <img id="unmute-btn" src="image/play-button.png" alt="">
+                        <img id="mute-btn" src="image/pause.png" alt="">
+                    <a href="book.html" target="_blank">kitoblar</a>
+                    <button class="close-icon" id="close" onclick="closeMenu()">&#10005;</button>
+                </div>
+                <button class="menu-icon" id="btn" onclick="openMenu()">&#9776;</button>
+                
+            </div>
+            <div class="head">
+                <h1>Ilm uchun</h1>
+                <p>darsliklar</p>
+                <h2>Insonga biror nima o'rgatishning eng maqbul usuli - unga shaxsan o'rnak ko'rsatishdir.</h2>
+                <div class="head-btn">
+                    <a href="https://t.me/manfaatli_contents" target="_blank">telegram</a>
+                    <a href="https://instagram.com/ismoiljon_ibrokhimov__" target="_blank">instagram</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="contents">
+            
+                <div class="zu-mini-box box1">
+                    <h1 id="box1">Qulga qullik qilma!</h1>
+                </div>
+                <div class="zu-mini-box box2">
+                    <h1 id="box2">Boshqalar ko‘taradigan mansabga chiqma, shunda yana ular tomonidan pastga tushirilmaysan.</h1>
+                </div>
+                <div class="zu-mini-box box3">
+                    <h1 id="box3">Allohni rozi qilmas ekansan, insonlarning sendan rozi bo‘lishidan ne naf?</h1>
+                </div>
+         
+            
+                <div class="zu-mini-box box4">
+                    <h1 id="box4"> Shaytonga uyimizda boy berilgan har bir jang ko‘chadagi mag‘lubiyatlarimizga sabab bo‘ladi.</h1>
+                </div>
+                <div class="zu-mini-box box5">
+                    <h1 id="box5">Vijdon koʻrichakday gap: hech bir ish qilmaydi-yu og‘rig‘iga chidab bo‘lmaydi.</h1>
+                </div>
+                <div class="zu-mini-box box6">
+                    <h1 id="box6">Imtihoni ham ikrom bo‘lgan buyuk Allohga hamdlar bo‘lsin!</h1>
+                </div>
+            
+        </div>
+
+        <audio id="hidden-audio">
+            <source src="audio/0ywz45bjlmzsyyeqe5v0.m4a" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <div class="footer">
+            <div class="foot-box1">
+                <div class="nav-box1">
+                    <img src="image/Black___White_Typography_Creative_Artist_ArtDesign_Logo_-removebg-preview.png" alt="">
+                </div>
+                <p id="textDisplay">Расулуллоҳ ﷺ дедилар: «Дунё ўзи бир матодир. Унинг энг яхши матоси солиҳа аёлдир».</p>
+                <div class="location">
+                    <img src="image/location.png" alt="">
+                    <p>Fergana,Altaryk</p>
+                </div>
+                <a href="https://google.mail.com/ismoiljoni497@gmail.com">ismoiljoni497@gmail.com</a>
+                <div class="social">
+                    <a href="https://instagram.com/ismoiljon_ibrokhimov__">
+                        <img src="image/instagram.png" alt="">
+                    </a>
+                    <a href="https://t.me/Ibrohimov_I13">
+                        <img src="image/telegram.png" alt="">
+                    </a>
+                    <a href="https://whatsapp.com/998936104544">
+                        <img src="image/whatsapp.png" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="foot-box2">
+                <video id="videoPlayer" width="400" height="400" controls>
+                    <source id="videoSource" src="" type="video/mp4">
+                    Sizning brauzeringiz video tagini qo'llab-quvvatlamaydi.
+                </video>
+                <div class="controls">
+                    <button id="prevButton">
+                        <img src="image/previous.png" alt="">
+                    </button>
+        
+                    <button id="playButton" onclick="playVideo()">
+                        <img src="image/play-button.png" alt="">
+                    </button>
+                    <button id="pauseButton" onclick="pauseVideo()">
+                        <img src="image/pause.png" alt="">
+                    </button>
+                    <button id="nextButton">
+                        <img src="image/next.png" alt="">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const videos = [
+            "videos/a (1).mp4",  // Bu yerga video fayllarni qo'shing
+            "videos/a (2).mp4",
+            "videos/a (3).mp4",
+            "videos/a (4).mp4",
+            "videos/a (5).mp4",
+            "videos/a (6).mp4",
+            "videos/a (7).mp4",
+            "videos/a (8).mp4",
+            "./videos/a (9).mp4",
+            "./videos/a (10).mp4",
+            "./videos/a (11).mp4",
+            "./videos/a (12).mp4",
+            "./videos/a (13).mp4",
+            "./videos/a (14).mp4",
+            "./videos/a (15).mp4",
+            "./videos/a (16).mp4",
+            "./videos/a (17).mp4",
+            "./videos/a (18).mp4",
+            "./videos/a (19).mp4",
+            "./videos/a (20).mp4",
+        
+            "./videos/a (21).mp4",
+            "./videos/a (22).mp4",
+            "./videos/a (23).mp4",
+            "./videos/a (24).mp4",
+            "./videos/a (25).mp4",
+            "./videos/a (26).mp4",
+            "./videos/a (27).mp4",
+            "./videos/a (28).mp4",
+            "./videos/a (29).mp4"
+        ];
+        let currentIndex = 0;
+        const prevButton = document.getElementById('prevButton');
+        const nextButton = document.getElementById('nextButton');
+        const videoPlayer = document.getElementById('videoPlayer');
+        const videoSource = document.getElementById('videoSource');
+        let playbtn= document.getElementById('playButton');
+        let pausebtn= document.getElementById('pauseButton');
+        // Tasodifiy video tanlash funksiyasi
+        function playRandomVideo() {
+            const randomIndex = Math.floor(Math.random() * videos.length);
+            videoSource.src = videos[randomIndex];
+            videoPlayer.load();
+            videoPlayer.removeAttribute('controls');
+        }
+        // Video tugaganda tasodifiy boshqa videoni ijro etish
+        videoPlayer.addEventListener('ended', playRandomVideo);
+        // Dastlab tasodifiy video ijro etiladi
+        playRandomVideo();
+
+        function playVideo(){
+            videoPlayer.play();
+            playbtn.style.display='none';
+            pausebtn.style.display='inline';
+
+        }
+
+        function pauseVideo(){
+            videoPlayer.pause();
+            playbtn.style.display='inline';
+            pausebtn.style.display='none';
+        }
+
+        prevButton.addEventListener('click', () => {
+            if (currentIndex > 0) {
+                currentIndex--; // Orqaga o'tish
+            } else {
+                currentIndex = videos.length - 1; // Birinchi videodan keyin oxirgi videoga o'tish
+            }
+            playRandomVideo(currentIndex);
+        });
+
+        nextButton.addEventListener('click', () => {
+            if (currentIndex < videos.length - 1) {
+                currentIndex++; // Oldinga o'tish
+            } else {
+                currentIndex = 0; // Oxirgi videodan keyin birinchi videoga o'tish
+            }
+            playRandomVideo(currentIndex);
+        });
+
+        const texts = [
+            "Ilm ma'rifatning kalitidir.",
+            "Bilim sizni kuchli qiladi.",
+            "O'qish va izlanish muvaffaqiyatga yetaklaydi.",
+            "Har kuni yangi narsalarni o'rganing.",
+            "Albatta har bir qorong'ulik ortidan yorug'lik kelishi bor",
+            "Ayollarga faqat karim inson lutf bilan muomala qiladi",
+            "Alloh unga tavakkal qilganlarni sevadi",
+            "Amalga oshmagan har narsa ortida Alloh xayr qilgan narsa bor",
+            "Расулуллоҳ ﷺ дедилар: «Дунё ўзи бир матодир. Унинг энг яхши матоси солиҳа аёлдир»."
+        ];
+        let currentIndexx = 0;
+        const textDisplay = document.getElementById("textDisplay");
+        const intervalTime = 5000; 
+        function switchText() {
+            const randomIndex = Math.floor(Math.random() * texts.length); // Tasodifiy indeks tanlash
+            textDisplay.innerHTML = texts[randomIndex];
+        }
+        setInterval(switchText, intervalTime);
+
+
+
+
+        const texts2 = [
+            "Pulning egasi yo‘q. Ammo sizning Egangiz bor!",
+            "Kimlardir vaqtdan yutyapti, kimlarnidir esa vaqt yutyapti…",
+            "Qabul bo‘lmagan duoga vaqti kelib, qabul bo‘lmagani uchun shukr qilasiz. Chunki Alloh bizga nima yaxshi-yu nima yomonligini bilguvchidir. ",
+            "Nimanidir tark etsak, u chiqindiga aylanadi. Lekin Qur’onni tark qilsak, o‘zimiz chiqindiga aylanib qolamiz.",
+            "Bizning ikki boyligimiz bor: pul va vaqt. Vaqtning puldan yagona farqi – hisobimizda qancha qolganini bilmaymiz.",
+            "Joni yongan sabr qilsin. Jonni yoqqan esa yonar kunini kutsin…",
+            "Maxluqqa yaxshi ko‘rinaman deb, Xoliqqa osiy bo‘lma!",
+            "Ko‘ngil na qahva istar, na qahvaxona,  Ko‘ngil diydor istar qahva bahona...",
+            "Hech kim hech kimni yo‘qotmaydi: ketgan boshqasini topar, qolgan o‘zini…",
+            "Hamma narsaga vaqtingiz bor. Vaqt berganga esa vaqt yo‘q…",
+            "Shaxmatda o‘yin tugagandan keyin shoh ham, piyoda ham bir qutiga solinadi.",
+            "Koʻngilning ham eshigi bor, deyishadi. Agar unda devor boʻlmasa, eshikdan ne foyda?",
+            "Biz sevgi yo‘lidamiz, yana ko‘rishamiz, yo‘l-yo‘lakay...",
+            "Kasbi dilozorlik bo‘lgan insonlarning “maosh”ini Alloh beradi.",
+            "Shunday boylar borki, ularning pulidan boshqa hech narsasi yo‘q.",
+            "Inson oʻz dushmanini qarshisida, deb oʻylaydi. Holbuki, uning dushmani ichida.",
+            "Kambag‘alning bolasi icholmagan sutni boyning ko‘ppagi ichib tursa, adolatdan so‘z ochish adolatdanmi?",
+            "Bir kun kelib sham o‘zini yoʻq qilgan ipni quchib yashaganini anglaydi.",
+            "Dard chekmaydigan insonlar bo‘lmaydi, uni sezdirmaydigan insonlar bo‘ladi.",
+            "Pulni qalbga emas, choʻntakka solish kerak, chunki uni choʻntakdan chiqarish osonroq.",
+            "Faqat kafan qoldi modasi hamon o‘zgarmagan. Na ochiq joyi bor, na cho‘ntagi...",
+            "Ayollar! “Iloyim, qabringiz ko‘ylagingiz kabi keng bo‘lsin”, desak, “Omin” deya olasizlarmi?",
+            "Qalbing parcha-parcha bo‘lib ketsa ham hech qachon qalbni parchalaguvchi bo‘lma!",
+            "Расулуллоҳ ﷺ дедилар: «Дунё ўзи бир матодир. Унинг энг яхши матоси солиҳа аёлдир»."
+        ];
+        let currentIndexxx = 0;
+        let text1 = document.getElementById("box1");
+        let text2 = document.getElementById("box2");
+        let text3 = document.getElementById("box3");
+        let text4 = document.getElementById("box4");
+        let text5 = document.getElementById("box5");
+        let text6 = document.getElementById("box6");
+        const intervalTimes = 5000; 
+        const intervalTimes1 = 5000; 
+        const intervalTimes2 = 10000; 
+        const intervalTimes3 = 15000; 
+        const intervalTimes4 = 20000; 
+        const intervalTimes5 = 25000; 
+        const intervalTimes6 = 30000; 
+        function switchText1() {
+            const randomIndex = Math.floor(Math.random() * texts2.length); // Tasodifiy indeks tanlash
+            text1.innerHTML = texts2[randomIndex];
+        }
+        setInterval(switchText1, intervalTimes1);
+        function switchText2() {
+            const randomIndex = Math.floor(Math.random() * texts2.length); // Tasodifiy indeks tanlash
+            text2.innerHTML = texts2[randomIndex];
+        }
+        setInterval(switchText2, intervalTimes2);
+        function switchText3() {
+            const randomIndex = Math.floor(Math.random() * texts2.length); // Tasodifiy indeks tanlash
+            text3.innerHTML = texts2[randomIndex];
+        }
+        setInterval(switchText3, intervalTimes3);
+        function switchText4() {
+            const randomIndex = Math.floor(Math.random() * texts2.length); // Tasodifiy indeks tanlash
+            text4.innerHTML = texts2[randomIndex];
+        }
+        setInterval(switchText4, intervalTimes4);
+        function switchText5() {
+            const randomIndex = Math.floor(Math.random() * texts2.length); // Tasodifiy indeks tanlash
+            text5.innerHTML = texts2[randomIndex];
+        }
+        setInterval(switchText5, intervalTimes5);
+        function switchText6() {
+            const randomIndex = Math.floor(Math.random() * texts2.length); // Tasodifiy indeks tanlash
+            text6.innerHTML = texts2[randomIndex];
+        }
+        setInterval(switchText6, intervalTimes6);
+
+        function openMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const openMenuBtn = document.getElementById('btn');
+            const closeMenuBtn = document.getElementById('close');
+            navLinks.style.display='flex';
+            navLinks.style.flexDirection='column';
+            navLinks.style.alignItems='center';
+            navLinks.classList.add('active');
+            openMenuBtn.style.display = 'none';  // Ochish tugmasini yashirish
+            closeMenuBtn.style.display = 'block'; // Yopish tugmasini ko'rsatish
+        }
+
+        // Menyuni yopish funksiyasi
+        function closeMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const openMenuBtn = document.getElementById('btn');
+            const closeMenuBtn = document.getElementById('close');
+            
+            navLinks.style.display='none';
+            openMenuBtn.style.display = 'block';  // Ochish tugmasini ko'rsatish
+            closeMenuBtn.style.display = 'none';  // Yopish tugmasini yashirish
+        }
+
+        const audio = document.getElementById('hidden-audio');
+        const unmuteBtn = document.getElementById('unmute-btn');
+        const muteBtn = document.getElementById('mute-btn');
+
+        // Ovozni yoqish tugmasi bosilganda
+        unmuteBtn.addEventListener('click', function() {
+            audio.play();  // Ovozni yoqish
+            unmuteBtn.style.display = 'none';  // Ovozni yoqish tugmasini yashirish
+            muteBtn.style.display = 'block';   // Ovozni o'chirish tugmasini ko'rsatish
+        });
+
+        // Ovozni o'chirish tugmasi bosilganda
+        muteBtn.addEventListener('click', function() {
+            audio.pause() // Ovozni o'chirish
+            muteBtn.style.display = 'none';   // Ovozni o'chirish tugmasini yashirish
+            unmuteBtn.style.display = 'block'; // Ovozni yoqish tugmasini ko'rsatish
+        });
+    </script>
+</body>
+</html>
